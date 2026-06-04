@@ -1,0 +1,54 @@
+// 메인 페이지 컴포넌트들 임포트
+import { Header } from "@/components/header"
+import { HeroSection } from "@/components/hero-section"
+import { ProjectsGrid } from "@/components/projects-grid"
+import { LabNotes } from "@/components/lab-notes"
+import { Workbench } from "@/components/workbench"
+import { Footer } from "@/components/footer"
+import { CursorGlow } from "@/components/cursor-glow"
+// SEO를 위한 구조화된 데이터 생성 함수
+import { generateWebsiteStructuredData, generatePersonStructuredData } from "@/lib/structured-data"
+
+// 메인 홈페이지 컴포넌트
+export default function Home() {
+  // 사이트 기본 URL (환경변수 또는 기본값 사용)
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eindev.ir'
+  // SEO용 구조화된 데이터 생성
+  const websiteStructuredData = generateWebsiteStructuredData(baseUrl)
+  const personStructuredData = generatePersonStructuredData()
+
+  return (
+    <>
+      {/* 웹사이트 구조화된 데이터 - 검색 엔진 최적화 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+      />
+      {/* 개인 정보 구조화된 데이터 - 검색 엔진 최적화 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
+      />
+      {/* 메인 콘텐츠 영역 */}
+      <main className="relative min-h-screen overflow-hidden scanlines">
+        {/* 마우스 커서 글로우 효과 */}
+        <CursorGlow />
+        {/* 컨텐츠 레이어 */}
+        <div className="relative z-10">
+          {/* 네비게이션 헤더 */}
+          <Header />
+          {/* 히어로 섹션 - 메인 소개 */}
+          <HeroSection />
+          {/* 프로젝트 포트폴리오 섹션 */}
+          <ProjectsGrid />
+          {/* 기술 블로그 노트 섹션 */}
+          <LabNotes />
+          {/* 진행 중인 작업 섹션 */}
+          <Workbench />
+          {/* 푸터 - 연락처 정보 */}
+          <Footer />
+        </div>
+      </main>
+    </>
+  )
+}
