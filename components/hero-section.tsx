@@ -1,14 +1,14 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import { useEffect, useState } from "react"
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 // 히어로 섹션에서 자동으로 타이핑되는 역할 목록
-const roles = ["시스템 해킹", "차량 보안 제품 개발", "웹 개발", "코드 작성"]
+const roles = ['시스템 해킹', '차량 보안 제품 개발', '웹 개발', '코드 작성']
 
 export function HeroSection() {
   const [currentRole, setCurrentRole] = useState(0)
-  const [displayText, setDisplayText] = useState("")
+  const [displayText, setDisplayText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
@@ -43,15 +43,13 @@ export function HeroSection() {
           <div className="space-y-8 sm:space-y-10">
             <div className="space-y-3 animate-fade-in-up">
               <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-primary">
-                shshjnag — 끝없이 성장하는
+                shshjang — 끝없이 성장하는
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl text-balance">
                 정보보호학전공
                 <br />
                 {/* 타이핑 효과가 적용되는 동적 텍스트 */}
-                <span
-                  className="bg-gradient-to-l from-primary/50 to-accent text-transparent bg-clip-text typing-cursor"
-                >
+                <span className="bg-gradient-to-l from-primary/50 to-accent text-transparent bg-clip-text typing-cursor">
                   {displayText}
                 </span>
               </h1>
@@ -59,7 +57,12 @@ export function HeroSection() {
 
             {/* 메인 설명 텍스트 */}
             <p className="max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground animate-fade-in-up stagger-2">
-              제 디지털 워크숍에 오신 것을 환영합니다 <span className="text-foreground font-medium">— 프로젝트, 프로토타입, 그리고 기획들...</span>이 있는 공간입니다. 여기서는 아이디어가 창조되고, 테스트되고, 다듬어집니다. 포트폴리오가 아닙니다. 연구실입니다.
+              제 디지털 워크숍에 오신 것을 환영합니다{' '}
+              <span className="text-foreground font-medium">
+                — 프로젝트, 프로토타입, 그리고 기획들...
+              </span>
+              이 있는 공간입니다. 여기서는 아이디어가 창조되고, 테스트되고,
+              다듬어집니다. 포트폴리오가 아닙니다. 연구실입니다.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up stagger-3">
@@ -69,7 +72,9 @@ export function HeroSection() {
                 className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-lg border border-primary bg-primary/10 px-7 py-4 sm:py-3.5 font-mono text-sm text-primary transition-all duration-500 hover:bg-primary hover:text-primary-foreground active:scale-[0.98]"
               >
                 <span className="relative z-10">explore artifacts</span>
-                <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
                 {/* 호버 효과가 있는 애니메이션 배경 */}
                 <span className="absolute inset-0 -translate-x-full bg-primary transition-transform duration-500 group-hover:translate-x-0" />
               </a>
@@ -143,7 +148,7 @@ export function HeroSection() {
             {/* 날짜 배지 - 애니메이션 지연 적용 */}
             <div
               className="absolute -bottom-3 sm:-bottom-6 -left-2 sm:-left-6 rounded-lg border border-border bg-card glass px-3 sm:px-4 py-1.5 font-mono text-[11px] sm:text-xs text-muted-foreground animate-float"
-              style={{ animationDelay: "1s" }}
+              style={{ animationDelay: '1s' }}
             >
               2026년 06월
             </div>
