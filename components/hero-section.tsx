@@ -101,7 +101,7 @@ export function HeroSection() {
                 {/* 노란색 최소화 버튼 */}
                 <div className="h-3 w-3 rounded-full bg-yellow-500/60 transition-colors hover:bg-yellow-500" />
                 {/* 초록색 최대화 버튼 */}
-                <div className="h-3 w-3 rounded-full bg-primary/60 transition-colors hover:bg-primary" />
+                <div className="h-3 w-3 rounded-full bg-green-500/60 transition-colors hover:bg-green-500" />
               </div>
               {/* 터미널 윈도우 제목 */}
               <div className="absolute top-3.5 left-1/2 -translate-x-1/2 bg-background/50 rounded-md px-3 py-1 font-mono text-xs text-muted-foreground">
