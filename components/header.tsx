@@ -13,7 +13,6 @@ const navItems = [
   { label: 'Projects', href: '/projects' },
   { label: 'Notes', href: '/notes' },
   { label: 'Workbench', href: '/workbench' },
-  { label: 'Blog', href: '/blog' },
 ]
 
 const socialLinks = [

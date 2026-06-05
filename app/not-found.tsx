@@ -14,9 +14,7 @@ export default function NotFound() {
           <p className="text-muted-foreground text-lg mb-2">
             The page you're looking for doesn't exist or has been moved.
           </p>
-          <p className="text-muted-foreground">
-            Let's get you back on track.
-          </p>
+          <p className="text-muted-foreground">Let's get you back on track.</p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -26,12 +24,14 @@ export default function NotFound() {
           >
             Go Home
           </Link>
-          <Link
-            href="/blog"
+          <a
+            href="https://shshjang14.tistory.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary/80 transition-colors"
           >
-            Browse Blog
-          </Link>
+            Browse Tistory
+          </a>
           <Link
             href="/projects"
             className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary/80 transition-colors"

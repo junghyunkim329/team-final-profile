@@ -1,34 +1,19 @@
 // 메인 페이지 컴포넌트들 임포트
-import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { ProjectsGrid } from "@/components/projects-grid"
-import { LabNotes } from "@/components/lab-notes"
-import { Workbench } from "@/components/workbench"
-import { Footer } from "@/components/footer"
-import { CursorGlow } from "@/components/cursor-glow"
-// SEO를 위한 구조화된 데이터 생성 함수
-import { generateWebsiteStructuredData, generatePersonStructuredData } from "@/lib/structured-data"
+import { Header } from '@/components/header'
+import { HeroSection } from '@/components/hero-section'
+import { ProjectsGrid } from '@/components/projects-grid'
+import { LabNotes } from '@/components/lab-notes'
+import { Workbench } from '@/components/workbench'
+import { Footer } from '@/components/footer'
+import { CursorGlow } from '@/components/cursor-glow'
 
 // 메인 홈페이지 컴포넌트
 export default function Home() {
   // 사이트 기본 URL (환경변수 또는 기본값 사용)
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://eindev.ir'
-  // SEO용 구조화된 데이터 생성
-  const websiteStructuredData = generateWebsiteStructuredData(baseUrl)
-  const personStructuredData = generatePersonStructuredData()
 
   return (
     <>
-      {/* 웹사이트 구조화된 데이터 - 검색 엔진 최적화 */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
-      />
-      {/* 개인 정보 구조화된 데이터 - 검색 엔진 최적화 */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
-      />
       {/* 메인 콘텐츠 영역 */}
       <main className="relative min-h-screen overflow-hidden scanlines">
         {/* 마우스 커서 글로우 효과 */}
