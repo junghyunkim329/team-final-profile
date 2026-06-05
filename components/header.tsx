@@ -9,7 +9,7 @@ import { ThemeChanger } from './theme-changer'
 import Link from 'next/link'
 
 const navItems = [
-  { label: 'Home', href: '/' },
+  // { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
   { label: 'Notes', href: '/notes' },
   { label: 'Workbench', href: '/workbench' },
