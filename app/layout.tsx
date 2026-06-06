@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || 'https://eindev.ir',
   ),
   title: {
-    default: "MYWORLD — shshjang14's Digital Laboratory",
+    default: 'MYWORLD',
     template: '%s | MYWORLD',
   },
   description:
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: '/',
-    title: "MYWORLD — shshjang14's Digital Laboratory",
+    title: 'MYWORLD',
     description:
       'A digital workshop where code meets curiosity. Experiments, prototypes, and open-source artifacts by shshjang14.',
     siteName: 'MYWORLD',
