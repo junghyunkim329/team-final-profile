@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import { Github, Twitter, Rss, Facebook } from 'lucide-react'
+import { Github, Twitter, Rss, Facebook, Mail } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
 import { ThemeChanger } from './theme-changer'
 import Link from 'next/link'
@@ -19,12 +19,12 @@ const navItems = [
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/junghyunkim329', icon: Github },
-  {
-    label: 'Facebook',
-    href: 'https://www.facebook.com/HackingTeamSCP/',
-    icon: Facebook,
-  },
   { label: 'Blog', href: 'https://shshjang14.tistory.com/', icon: Rss },
+  {
+    label: 'Mail',
+    href: 'mailto:example@email.com',
+    icon: Mail,
+  },
 ]
 
 export function Header() {
