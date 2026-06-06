@@ -8,10 +8,12 @@ import { ThemeToggle } from './theme-toggle'
 import { ThemeChanger } from './theme-changer'
 import Link from 'next/link'
 
+// 네비게이션 아이템들 - 마우스 오버 효과와 함께 표시됨
 const navItems = [
   // { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
   { label: 'Notes', href: '/notes' },
+  { label: 'Team', href: '/team' },
   // { label: 'Workbench', href: '/workbench' },
 ]
 
