@@ -1,4 +1,13 @@
-import { Code2, Layers, FileText, Zap, Bot, Globe } from "lucide-react";
+import {
+  Code2,
+  Layers,
+  ShieldCheck,
+  FileText,
+  Car,
+  Zap,
+  Bot,
+  Globe,
+} from 'lucide-react'
 
 export default function IntroductionPage() {
   return (
@@ -9,20 +18,21 @@ export default function IntroductionPage() {
           <div className="space-y-6 sm:space-y-8">
             <div className="space-y-2">
               <p className="font-mono text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-muted-foreground">
-                Welcome to EinCode
+                Welcome to MYWORLD
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-balance">
-                Where Code Meets{" "}
+                반가워요{' '}
                 <span className="bg-gradient-to-l from-primary/50 to-accent text-transparent bg-clip-text">
-                  Creativity
+                  김정현
                 </span>
+                입니다!
               </h1>
             </div>
 
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground max-w-3xl">
-              EinCode is a digital workshop and portfolio platform designed for developers who
-              believe in building in public. It&apos;s a space where ideas take shape, experiments
-              unfold, and open-source projects come to life.
+              MYWORLD는 제가 걸어온 길을 정리하고 있습니다. 지금까지 개발부터
+              시스템 보안까지 다양한 길을 걸어보며 지금은 차량 보안 제품 개발을
+              꿈꾸고 있습니다. PROJECTS를 통해 길을 확인해보세요!
             </p>
           </div>
         </div>
@@ -34,32 +44,31 @@ export default function IntroductionPage() {
           <div className="rounded border border-border/50 bg-card/50 p-6 sm:p-10 backdrop-blur-sm space-y-8">
             <div className="space-y-4">
               <p className="font-mono text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">
-                About the Platform
+                About Me
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                A Developer&apos;s Digital Workshop
+                정보보호학전공
               </h2>
             </div>
 
             <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
               <p>
-                EinCode isn&apos;t just another portfolio website—it&apos;s a living, breathing
-                showcase of continuous learning and experimentation. Built by developers, for
-                developers, it represents the philosophy that the best way to learn is to build,
-                share, and iterate.
+                중부대학교 정보보호학전공 2학년에 재학 중이며 보안에 대해
+                전문적으로 배우고 있습니다. 현재 웹프로그래밍, 보안자료구조,
+                서버구축및운영실습, 객체지향프로그래밍, 네트워크 보안 등을
+                이수하였습니다.
               </p>
 
               <p>
-                Whether you&apos;re exploring cutting-edge AI integrations, diving into systems
-                programming, or looking for modern web development patterns, EinCode offers a window
-                into real-world projects at various stages of development—from initial experiments
-                to production-ready solutions.
+                학기 중과 방학에는 다양한 프로젝트를 시도하며 경험을 쌓고
+                있습니다. 웹서비스 개발에서 시작해 Pwnable Wargame 제작
+                프로젝트, 취약점 분석, 차량 보안 제품 개발 프로젝트를
+                진행하였습니다.
               </p>
 
               <p>
-                The platform is fully open-source, encouraging collaboration and knowledge sharing
-                within the developer community. Every project, every lab note, and every line of
-                code is designed to inspire and educate.
+                유기적으로 연결되는 보안에 대한 이해도를 높이기 위해 여러 경험을
+                해보았다면 이젠 전문성을 갖출 단계를 준비하고 있습니다.
               </p>
             </div>
           </div>
@@ -71,51 +80,51 @@ export default function IntroductionPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 space-y-4 text-center">
             <p className="font-mono text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">
-              Platform Features
+              Now
             </p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Built for Modern Development
+              대표 활동 이력
             </h2>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
+                icon: ShieldCheck,
+                title: 'S․C․P',
+                description:
+                  'Security Check Point의 약자로 보안/해킹 연구를 진행하는 중부대 정보보안 동아리이며 HSpace와 CCA의 파트너십 동아리로 활동하고 있습니다.',
+              },
+              {
                 icon: Code2,
-                title: "Open Source Projects",
+                title: '멋쟁이 사자처럼 13기',
                 description:
-                  "Every project is available on GitHub for learning and collaboration. Transparent development process from start to finish.",
+                  '전국 80여개 대학과 함께 하는 연합 동아리로 창의적인 아이디어를 기획하고 프로토타입으로 실현 가능성을 검증하는 아이디어 합니다.',
               },
               {
-                icon: Layers,
-                title: "Developer Workbench",
+                icon: Car,
+                title: '차고연구실',
                 description:
-                  "A dedicated space for ongoing experiments and prototypes. Watch ideas evolve from concept to implementation.",
+                  '본 연구에서는 차량 내 전자제어 유닛 환경을 모의로 구현하고, 해당 환경에서 악성 메시지 공격을 탐지하는 연구를 크게 두 가지 방향으로 진행했습니다. ',
               },
-              {
-                icon: FileText,
-                title: "Lab Notes",
-                description:
-                  "Detailed documentation of learning journeys, technical insights, and development patterns discovered along the way.",
-              },
-              {
-                icon: Zap,
-                title: "Modern Tech Stack",
-                description:
-                  "Built with cutting-edge technologies including Next.js, React, TypeScript, and Tailwind CSS for optimal performance.",
-              },
-              {
-                icon: Bot,
-                title: "AI Integration",
-                description:
-                  "Exploring the intersection of AI and web development with practical implementations and real-world use cases.",
-              },
-              {
-                icon: Globe,
-                title: "Localization",
-                description:
-                  "Multi-language support with i18n integration, making projects accessible to a global developer community.",
-              },
+              // {
+              //   icon: Zap,
+              //   title: 'Modern Tech Stack',
+              //   description:
+              //     'Built with cutting-edge technologies including Next.js, React, TypeScript, and Tailwind CSS for optimal performance.',
+              // },
+              // {
+              //   icon: Bot,
+              //   title: 'AI Integration',
+              //   description:
+              //     'Exploring the intersection of AI and web development with practical implementations and real-world use cases.',
+              // },
+              // {
+              //   icon: Globe,
+              //   title: 'Localization',
+              //   description:
+              //     'Multi-language support with i18n integration, making projects accessible to a global developer community.',
+              // },
             ].map((feature, index) => (
               <div
                 key={index}
@@ -136,5 +145,5 @@ export default function IntroductionPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
