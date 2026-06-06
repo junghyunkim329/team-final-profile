@@ -6,6 +6,7 @@ import {
   Heart,
   Rss,
   Facebook,
+  Globe,
 } from 'lucide-react'
 
 // 소셜 미디어 링크 정의 - 각 플랫폼의 아이콘과 함께 저장됨
@@ -15,12 +16,6 @@ const socialLinks = [
     href: 'https://github.com/junghyunkim329',
     handle: '@junghyunkim329',
     icon: Github,
-  },
-  {
-    label: 'Facebook',
-    href: 'https://www.facebook.com/HackingTeamSCP/',
-    handle: '@HackingTeamSCP',
-    icon: Facebook,
   },
   {
     label: 'Blog',
@@ -33,6 +28,12 @@ const socialLinks = [
     href: 'mailto:example@email.com',
     handle: 'example@email.com',
     icon: Mail,
+  },
+  {
+    label: 'STUDEO',
+    href: 'https://final-studeo.vercel.app/',
+    handle: 'final-studeo.vercel.app',
+    icon: Globe,
   },
 ]
 
@@ -52,16 +53,16 @@ export function Footer() {
                 CONTECT
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-balance">
-                {'함께 뭔가 '}
+                {'항상 '}
                 <span className="bg-gradient-to-l from-primary/50 to-accent text-transparent bg-clip-text ">
-                  만들어봅시다
+                  도전
                 </span>
+                {'을 이어 나갑니다'}
               </h2>
             </div>
             {/* 설명 텍스트 */}
             <p className="max-w-md text-base sm:text-lg text-muted-foreground leading-relaxed">
-              협업, 흥미로운 문제, 코드, 디자인, 그리고 그 사이의 모든 것에 대한
-              대화에 항상 관심이 있습니다.
+              저와 연락하고 싶으신가요?
             </p>
 
             <div className="pt-2">
