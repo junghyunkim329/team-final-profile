@@ -1,136 +1,139 @@
-"use client"
+'use client'
 
-import { useState, useEffect, useRef } from "react"
-import { cn } from "@/lib/utils"
-import { Github, Star, GitFork, ExternalLink, Sparkles } from "lucide-react"
+import { useState, useEffect, useRef } from 'react'
+import { cn } from '@/lib/utils'
+import { Github, Star, GitFork, ExternalLink, Sparkles } from 'lucide-react'
 
 const projects = [
   {
     id: 0,
-    title: "EinUI",
+    title: '#####EinUI',
     description:
-      "A collection of beautiful, ready-made Liquid Glass UI components you can preview, copy, and drop into any web app. Built on Tailwind, shadcn/ui, and Radix UI primitives.",
-    tags: ["TypeScript", "Next.js 16", "shadcn", "Radix UI", "Tailwind"],
-    status: "in-progress",
-    year: "2025",
+      'A collection of beautiful, ready-made Liquid Glass UI components you can preview, copy, and drop into any web app. Built on Tailwind, shadcn/ui, and Radix UI primitives.',
+    tags: ['TypeScript', 'Next.js 16', 'shadcn', 'Radix UI', 'Tailwind'],
+    status: 'in-progress',
+    year: '2025',
     stars: 34,
     forks: 1,
-    url: "https://github.com/ehsanghaffar/einui",
-    homepage: "https://ui.eindev.ir",
+    url: 'https://github.com/ehsanghaffar/einui',
+    homepage: 'https://ui.eindev.ir',
     featured: true,
     highlight: true,
   },
   {
     id: 1,
-    title: "EinBioGPT",
+    title: '#####EinBioGPT',
     description:
       "An intelligent web application built with Next.js, Tailwind CSS, and OpenAI's GPT models. Generates engaging and personalized bios for social media platforms.",
-    tags: ["TypeScript", "Next.js", "GPT", "LangChain"],
-    status: "shipped",
-    year: "2023",
+    tags: ['TypeScript', 'Next.js', 'GPT', 'LangChain'],
+    status: 'shipped',
+    year: '2023',
     stars: 17,
     forks: 8,
-    url: "https://github.com/ehsanghaffar/einbiogpt",
-    homepage: "https://bio.eindev.ir/",
+    url: 'https://github.com/ehsanghaffar/einbiogpt',
+    homepage: 'https://bio.eindev.ir/',
     featured: true,
   },
   {
     id: 2,
-    title: "JavaScript Playground",
+    title: '#####JavaScript Playground',
     description:
-      "A collection of JavaScript code snippets, algorithms, and mini-projects for learning and reference purposes.",
-    tags: ["JavaScript", "Algorithms", "Snippets"],
-    status: "shipped",
-    year: "2020",
+      'A collection of JavaScript code snippets, algorithms, and mini-projects for learning and reference purposes.',
+    tags: ['JavaScript', 'Algorithms', 'Snippets'],
+    status: 'shipped',
+    year: '2020',
     stars: 19,
     forks: 5,
-    url: "https://github.com/ehsanghaffar/javascript-playground",
+    url: 'https://github.com/ehsanghaffar/javascript-playground',
     featured: false,
   },
   {
     id: 3,
-    title: "Next.js 16 Docker Starter",
+    title: '#####Next.js 16 Docker Starter',
     description:
-      "A batteries-included starter for building Next.js 16.1.0 apps with App Router, PNPM, Tailwind v4+, Next-Auth v5, and multi-stage Docker setup.",
-    tags: ["Next.js 16.1.0", "Docker", "Tailwind v4"],
-    status: "in-progress",
-    year: "2025",
+      'A batteries-included starter for building Next.js 16.1.0 apps with App Router, PNPM, Tailwind v4+, Next-Auth v5, and multi-stage Docker setup.',
+    tags: ['Next.js 16.1.0', 'Docker', 'Tailwind v4'],
+    status: 'in-progress',
+    year: '2025',
     stars: 9,
     forks: 4,
-    url: "https://github.com/ehsanghaffar/next16-docker-tw4-starter",
-    homepage: "https://nextjs-16-docker.vercel.app",
+    url: 'https://github.com/ehsanghaffar/next16-docker-tw4-starter',
+    homepage: 'https://nextjs-16-docker.vercel.app',
     featured: true,
   },
   {
     id: 4,
-    title: "Awesome Clubhouses",
+    title: '#####Awesome Clubhouses',
     description:
-      "Curated list of resources for Clubhouse, the voice-based social network where people come together to talk, listen and learn.",
-    tags: ["Python", "Awesome List", "Social"],
-    status: "archived",
-    year: "2022",
+      'Curated list of resources for Clubhouse, the voice-based social network where people come together to talk, listen and learn.',
+    tags: ['Python', 'Awesome List', 'Social'],
+    status: 'archived',
+    year: '2022',
     stars: 41,
     forks: 8,
-    url: "https://github.com/ehsanghaffar/awesome-clubhouse",
-    homepage: "https://ehsanghaffar.github.io/awesome-clubhouse/",
+    url: 'https://github.com/ehsanghaffar/awesome-clubhouse',
+    homepage: 'https://ehsanghaffar.github.io/awesome-clubhouse/',
     featured: false,
   },
   {
     id: 5,
-    title: "LLM Practice",
+    title: '#####LLM Practice',
     description:
-      "A self-hosted personal chatbot API with FastAPI. Interact with Llama2 and other open-source LLMs for natural language conversations.",
-    tags: ["Python", "FastAPI", "Llama2", "MCP"],
-    status: "shipped",
-    year: "2023",
+      'A self-hosted personal chatbot API with FastAPI. Interact with Llama2 and other open-source LLMs for natural language conversations.',
+    tags: ['Python', 'FastAPI', 'Llama2', 'MCP'],
+    status: 'shipped',
+    year: '2023',
     stars: 13,
     forks: 3,
-    url: "https://github.com/ehsanghaffar/llm-practice",
+    url: 'https://github.com/ehsanghaffar/llm-practice',
     featured: false,
   },
   {
     id: 6,
-    title: "Hand-Build Linux",
+    title: '#####Hand-Build Linux',
     description:
-      "A minimal, customizable Linux distribution built from scratch using the Linux kernel, BusyBox, and Syslinux bootloader.",
-    tags: ["Shell", "Linux", "Docker"],
-    status: "in-progress",
-    year: "2025",
+      'A minimal, customizable Linux distribution built from scratch using the Linux kernel, BusyBox, and Syslinux bootloader.',
+    tags: ['Shell', 'Linux', 'Docker'],
+    status: 'in-progress',
+    year: '2025',
     stars: 8,
     forks: 1,
-    url: "https://github.com/ehsanghaffar/handbuilt-linux",
+    url: 'https://github.com/ehsanghaffar/handbuilt-linux',
     featured: true,
   },
   {
     id: 7,
-    title: "Next.js AppDir Template",
+    title: '#####Next.js AppDir Template',
     description:
-      "An all-inclusive Next.js web application template showcasing seamless integration of Next.js, Docker, MongoDB, and Tailwind CSS.",
-    tags: ["TypeScript", "Next.js", "Docker", "MongoDB"],
-    status: "shipped",
-    year: "2023",
+      'An all-inclusive Next.js web application template showcasing seamless integration of Next.js, Docker, MongoDB, and Tailwind CSS.',
+    tags: ['TypeScript', 'Next.js', 'Docker', 'MongoDB'],
+    status: 'shipped',
+    year: '2023',
     stars: 19,
     forks: 6,
-    url: "https://github.com/ehsanghaffar/nextjs-appdir-docker",
+    url: 'https://github.com/ehsanghaffar/nextjs-appdir-docker',
     featured: false,
   },
 ]
 
 // 프로젝트 필터링 옵션들
-const filters = ["전체", "완료", "진행 중", "보관됨"]
+const filters = ['전체', '완료', '진행 중', '보관됨']
 
 export function ProjectsGrid() {
-  const [activeFilter, setActiveFilter] = useState("all")
+  const [activeFilter, setActiveFilter] = useState('all')
 
   // 선택한 필터에 따라 프로젝트 목록 필터링
   const statusMap: Record<string, string> = {
-    "전체": "all",
-    "완료": "shipped",
-    "진행 중": "in-progress",
-    "보관됨": "archived"
+    전체: 'all',
+    완료: 'shipped',
+    '진행 중': 'in-progress',
+    보관됨: 'archived',
   }
   const mappedStatus = statusMap[activeFilter] || activeFilter
-  const filteredProjects = mappedStatus === "all" ? projects : projects.filter((p) => p.status === mappedStatus)
+  const filteredProjects =
+    mappedStatus === 'all'
+      ? projects
+      : projects.filter((p) => p.status === mappedStatus)
 
   return (
     <section id="projects" className="px-4 sm:px-6 py-20 sm:py-28">
@@ -139,8 +142,12 @@ export function ProjectsGrid() {
         <div className="mb-10 sm:mb-14 flex flex-col gap-6 sm:gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3 animate-fade-in-up">
             {/* 섹션 타이틀 */}
-            <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-primary">결과물</p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">오픈소스 프로젝트</h2>
+            <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-primary">
+              결과물
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              오픈소스 프로젝트
+            </h2>
           </div>
 
           <div className="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible sm:flex-wrap scrollbar-hide animate-fade-in-up stagger-2">
@@ -149,10 +156,10 @@ export function ProjectsGrid() {
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 className={cn(
-                  "shrink-0 rounded-lg border px-5 py-2.5 font-mono text-xs uppercase tracking-wider transition-all duration-300 active:scale-[0.98]",
+                  'shrink-0 rounded-lg border px-5 py-2.5 font-mono text-xs uppercase tracking-wider transition-all duration-300 active:scale-[0.98]',
                   activeFilter === filter
-                    ? "border-primary bg-primary/15 text-primary shadow-sm shadow-primary/20"
-                    : "border-border text-muted-foreground hover:border-foreground/50 hover:text-foreground hover:bg-secondary/50",
+                    ? 'border-primary bg-primary/15 text-primary shadow-sm shadow-primary/20'
+                    : 'border-border text-muted-foreground hover:border-foreground/50 hover:text-foreground hover:bg-secondary/50',
                 )}
               >
                 {filter}
@@ -166,19 +173,21 @@ export function ProjectsGrid() {
             <article
               key={project.id}
               className={cn(
-                "group relative overflow-hidden rounded-xl border bg-card/40 p-6 sm:p-7 glass transition-all duration-400 active:scale-[0.99] hover-lift hover:border-primary/40 hover:bg-card/70 animate-fade-in-up",
-                "highlight" in project && project.highlight
-                  ? "sm:col-span-2 lg:col-span-2 border-primary/30 bg-gradient-to-br from-primary/8 via-card/50 to-primary/8"
-                  : "border-border/60",
-                project.featured && !("highlight" in project && project.highlight) && "sm:col-span-2 lg:col-span-1",
+                'group relative overflow-hidden rounded-xl border bg-card/40 p-6 sm:p-7 glass transition-all duration-400 active:scale-[0.99] hover-lift hover:border-primary/40 hover:bg-card/70 animate-fade-in-up',
+                'highlight' in project && project.highlight
+                  ? 'sm:col-span-2 lg:col-span-2 border-primary/30 bg-gradient-to-br from-primary/8 via-card/50 to-primary/8'
+                  : 'border-border/60',
+                project.featured &&
+                  !('highlight' in project && project.highlight) &&
+                  'sm:col-span-2 lg:col-span-1',
               )}
               style={{ animationDelay: `${(index % 6) * 100 + 200}ms` }}
             >
-              {"highlight" in project && project.highlight && (
+              {'highlight' in project && project.highlight && (
                 <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-3.5 py-1.5 animate-pulse-glow">
                   <Sparkles className="h-3.5 w-3.5 text-primary" />
                   {/* 추천 프로젝트 배지 */}
-                <span className="font-mono text-[10px] uppercase tracking-wider text-primary font-medium">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-primary font-medium">
                     추천
                   </span>
                 </div>
@@ -187,31 +196,33 @@ export function ProjectsGrid() {
               {/* 프로젝트 상태 표시기 (완료/진행중/보관됨) */}
               <div
                 className={cn(
-                  "absolute right-5 top-5 flex items-center gap-2.5",
-                  "highlight" in project && project.highlight && "top-5",
+                  'absolute right-5 top-5 flex items-center gap-2.5',
+                  'highlight' in project && project.highlight && 'top-5',
                 )}
               >
                 {/* 상태를 나타내는 색상 원형 표시 */}
                 <span
                   className={cn(
-                    "h-2.5 w-2.5 rounded-full transition-shadow duration-300",
-                    project.status === "shipped" && "bg-primary shadow-sm shadow-primary/50",
-                    project.status === "in-progress" && "bg-yellow-500 animate-pulse shadow-sm shadow-yellow-500/50",
-                    project.status === "archived" && "bg-muted-foreground",
+                    'h-2.5 w-2.5 rounded-full transition-shadow duration-300',
+                    project.status === 'shipped' &&
+                      'bg-primary shadow-sm shadow-primary/50',
+                    project.status === 'in-progress' &&
+                      'bg-yellow-500 animate-pulse shadow-sm shadow-yellow-500/50',
+                    project.status === 'archived' && 'bg-muted-foreground',
                   )}
                 />
                 {/* 상태 텍스트 */}
                 <span className="font-mono text-xs text-muted-foreground">
-                  {project.status === "shipped" && "완료"}
-                  {project.status === "in-progress" && "진행 중"}
-                  {project.status === "archived" && "보관됨"}
+                  {project.status === 'shipped' && '완료'}
+                  {project.status === 'in-progress' && '진행 중'}
+                  {project.status === 'archived' && '보관됨'}
                 </span>
               </div>
 
               <div
                 className={cn(
-                  "mb-5 font-mono text-xs text-muted-foreground",
-                  "highlight" in project && project.highlight && "mt-10",
+                  'mb-5 font-mono text-xs text-muted-foreground',
+                  'highlight' in project && project.highlight && 'mt-10',
                 )}
               >
                 {project.year}
@@ -219,8 +230,10 @@ export function ProjectsGrid() {
 
               <h3
                 className={cn(
-                  "mb-3 font-bold tracking-tight transition-all duration-300 group-hover:text-gradient",
-                  "highlight" in project && project.highlight ? "text-xl sm:text-2xl" : "text-lg sm:text-xl",
+                  'mb-3 font-bold tracking-tight transition-all duration-300 group-hover:text-gradient',
+                  'highlight' in project && project.highlight
+                    ? 'text-xl sm:text-2xl'
+                    : 'text-lg sm:text-xl',
                 )}
               >
                 {project.title}
@@ -228,8 +241,10 @@ export function ProjectsGrid() {
 
               <p
                 className={cn(
-                  "mb-5 text-sm leading-relaxed text-muted-foreground",
-                  "highlight" in project && project.highlight ? "line-clamp-3" : "line-clamp-2",
+                  'mb-5 text-sm leading-relaxed text-muted-foreground',
+                  'highlight' in project && project.highlight
+                    ? 'line-clamp-3'
+                    : 'line-clamp-2',
                 )}
               >
                 {project.description}

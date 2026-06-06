@@ -10,8 +10,10 @@ import Link from 'next/link'
 
 const navItems = [
   // { label: 'Home', href: '/' },
+  // { label: 'Inrtodution', href: '/inrtodution' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Notes', href: '/notes' },
+  //{ label: 'Notes', href: '/notes' },
+  { label: 'Team', href: '/team' },
   // { label: 'Workbench', href: '/workbench' },
 ]
 
