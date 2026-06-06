@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: 'MYWORLD',
     images: [
       {
-        url: '/og-image.png',
+        url: '/MYWORLD-icon.png',
         width: 1200,
         height: 630,
         alt: "MYWORLD — shshjang14's Digital Laboratory",
@@ -86,19 +86,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/MYWORLD-icon.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/MYWORLD-icon.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/MYWORLD-icon.svg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/MYWORLD-icon.png',
   },
   manifest: '/site.webmanifest',
 }
