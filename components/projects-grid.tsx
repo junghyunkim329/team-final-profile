@@ -117,7 +117,7 @@ const projects = [
 ]
 
 // 프로젝트 필터링 옵션들
-const filters = ['전체', '완료', '진행 중', '보관됨']
+const filters = ['전체', '완료', '진행 중']
 
 export function ProjectsGrid() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -127,7 +127,7 @@ export function ProjectsGrid() {
     전체: 'all',
     완료: 'shipped',
     '진행 중': 'in-progress',
-    보관됨: 'archived',
+    // 보관됨: 'archived',
   }
   const mappedStatus = statusMap[activeFilter] || activeFilter
   const filteredProjects =
@@ -143,10 +143,10 @@ export function ProjectsGrid() {
           <div className="space-y-3 animate-fade-in-up">
             {/* 섹션 타이틀 */}
             <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-primary">
-              결과물
+              Artifacts
             </p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              오픈소스 프로젝트
+              Projects
             </h2>
           </div>
 
