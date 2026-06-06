@@ -24,12 +24,6 @@ export default function Home() {
           <Header />
           {/* 히어로 섹션 - 메인 소개 */}
           <HeroSection />
-          {/* 프로젝트 포트폴리오 섹션 */}
-          <ProjectsGrid />
-          {/* 기술 블로그 노트 섹션 */}
-          <LabNotes />
-          {/* 진행 중인 작업 섹션 */}
-          <Workbench />
           {/* 푸터 - 연락처 정보 */}
           <Footer />
         </div>
