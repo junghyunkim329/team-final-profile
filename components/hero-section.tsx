@@ -57,18 +57,15 @@ export function HeroSection() {
 
             {/* 메인 설명 텍스트 */}
             <p className="max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground animate-fade-in-up stagger-2">
-              제 디지털 워크숍에 오신 것을 환영합니다{' '}
-              <span className="text-foreground font-medium">
-                — 프로젝트, 프로토타입, 그리고 기획들...
-              </span>
-              이 있는 공간입니다. 여기서는 아이디어가 창조되고, 테스트되고,
-              다듬어집니다. 포트폴리오가 아닙니다. 연구실입니다.
+              MYWORLD에 오신 것을 환영합니다{' '}
+              <span className="text-foreground font-medium">경험</span>{' '}
+              아카이브를 확인해보세요
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up stagger-3">
               {/* 주요 CTA 버튼 - 포트폴리오 탐색 */}
               <a
-                href="#projects"
+                href="/projects"
                 className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-lg border border-primary bg-primary/10 px-7 py-4 sm:py-3.5 font-mono text-sm text-primary transition-all duration-500 hover:bg-primary hover:text-primary-foreground active:scale-[0.98]"
               >
                 <span className="relative z-10">explore artifacts</span>
@@ -110,32 +107,35 @@ export function HeroSection() {
 
               <pre className="mt-6 overflow-hidden font-mono text-[10px] leading-relaxed text-primary/80 sm:text-xs md:text-sm">
                 {/* 모바일 뷰에서 보이는 작은 ASCII 아트 */}
-                <span className="sm:hidden">{`┌───────────────────────┐
-│  ██████╗███████╗      │
-│ ██╔════╝██╔════╝      │
-│ ██║     █████╗        │
-│ ██║     ██╔══╝        │
-│ ╚██████╗██║           │
-│  ╚═════╝╚═╝           │
-│                       │
-│  > 실험: 12           │
-│  > 상태: 창조 중      │
-└───────────────────────┘`}</span>
+                <span className="sm:hidden">{`╔═════════════════════════════════════╗
+║                                     ║
+║     //  ██████╗ ██╗  ██╗  //        ║
+║    //  ██╔════╝ ██║  ██║ //         ║
+║   //   ╚█████╗  ███████║//          ║
+║  //     ╚═══██╗ ██╔══██║//          ║
+║  //    ██████╔╝ ██║  ██║//          ║
+║  //    ╚═════╝  ╚═╝  ╚═╝//          ║
+║                                     ║
+║  [+] SYSTEM: ACTIVE                 ║
+║  [+] TERMINAL: ONLINE               ║
+║  [+] WORKBENCH: READY               ║
+║                                     ║
+╚═════════════════════════════════════╝`}</span>
                 {/* 데스크톱 뷰에서 보이는 더 큰 ASCII 아트 */}
-                <span className="hidden sm:block">{`┌─────────────────────────────────────┐
-│                                     │
-│  ██████╗ ██████╗ ██████╗ ███████╗   │
-│ ██╔════╝██╔═══██╗██╔══██╗██╔════╝   │
-│ ██║     ██║   ██║██║  ██║█████╗     │
-│ ██║     ██║   ██║██║  ██║██╔══╝     │
-│ ╚██████╗╚██████╔╝██████╔╝███████╗   │
-│  ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝   │
-│                                     │
-│   > 로드된 실험: 12                  │
-│   > 상태: 창조 중                    │
-│   > 마지막 업데이트: 오늘             │
-│                                     │
-└─────────────────────────────────────┘`}</span>
+                <span className="hidden sm:block">{`╔═════════════════════════════════════════════════════════╗
+║                                                         ║
+║      //  ██████╗ ██╗  ██╗ ██████╗ ██╗  ██╗      //      ║
+║     //  ██╔════╝ ██║  ██║██╔════╝ ██║  ██║     //       ║
+║    //   ╚█████╗  ███████║╚█████╗  ███████║    //        ║
+║   //     ╚═══██╗ ██╔══██║ ╚═══██╗ ██╔══██║   //         ║
+║  //     ██████╔╝ ██║  ██║██████╔╝ ██║  ██║  //          ║
+║ //      ╚═════╝  ╚═╝  ╚═╝╚═════╝  ╚═╝  ╚═╝ //           ║
+║                                                         ║
+║  [+] SYSTEM: ACTIVE                                     ║
+║  [+] TERMINAL: ONLINE                                   ║
+║  [+] WORKBENCH: READY                                   ║
+║                                                         ║
+╚═════════════════════════════════════════════════════════╝`}</span>
               </pre>
             </div>
 
