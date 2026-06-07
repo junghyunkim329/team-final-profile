@@ -74,6 +74,48 @@ export default function IntroductionPage() {
           </div>
         </div>
       </section>
+      <section className="relative px-4 sm:px-6 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl">
+          <div className="rounded border border-border/50 bg-card/50 p-6 sm:p-10 backdrop-blur-sm space-y-8">
+            <div className="space-y-4">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-primary">
+                Web Programming
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                웹에 대한 이해
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
+              <p>
+                웹프로그래밍 수업을 들으며 페이지 레이아웃과 프로젝트 구성부터
+                React와 Next.js등 프레임워크까지 웹에 대한 기초를 다졌습니다.
+              </p>
+
+              <p>
+                웹 페이지 구성 3요소인 HTML, CSS, JS만을 이용하여 제작한
+                `STUDEO` 서비스로 시작해 최종적으로 React, Tailwind CSS,
+                next.js를 이용하여 지금의 포트폴리오를 제작하였습니다. next.js의
+                기본 빌드 과정을 통해 프로젝트 구성을 공부하였으며 v0를 활용하여
+                개발 과정의 어려움을 해소하며 진행했습니다.
+              </p>
+
+              <p>
+                이러한 기술은 본인의 가치, 역량, 강점 등을 상대방에게 효과적으로
+                전달할 수 있는 방법이 될 수 있을 뿐더러 웹 보안적 지식까지
+                확장한다면 차량용 소프트웨어의 보안 코딩에도 도움이 될 것입니다.
+                웹 애플리케이션의 대표적인 취약점 방어 기법(SQL 인젝션, XSS 방지
+                등)은 차량 내부 시스템으로 들어오는 외부 데이터 입력을 검증하고
+                필터링하는 보안 코딩의 원리와 정확히 일치합니다.
+                {/* 차량 소프트웨어 무선 업데이트 보안처럼 웹 기반의 안전한 파일 전송
+                프로토콜과 인증 서버를 구축하여 인가된 보안 패치 및 펌웨어가
+                변조 없이 차량 내 ECU에 정확히 설치되도록 제어하는 기능을 만들
+                수 있을 것 같습니다. */}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Features Grid */}
       <section className="relative px-4 sm:px-6 py-16 sm:py-20">
