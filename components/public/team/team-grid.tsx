@@ -83,8 +83,8 @@ export function TeamGrid() {
           {/* 설명 텍스트 */}
           <p className="max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
             보안을 공부하고 하는 사람을 위한 학습 서비스를 개발하였습니다.
-            <br />
-            학습에 도움이 되는 서비스 소개 및 퀴즈를 이용할 수 있습니다.
+            사용자는 다양한 퀴즈와 문제를 통해 핵심 개념을 확인할 수 있으며
+            실습과 복습을 쉽게 할 수 있습니다.
           </p>
         </div>
 
