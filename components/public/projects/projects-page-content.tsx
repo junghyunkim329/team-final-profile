@@ -100,7 +100,7 @@ const projects = [
     title: 'STUDEO(중간)',
     description: '보안을 공부하고 하는 사람을 위한 학습 서비스 개발의 시작',
     tags: ['웹프로그래밍', '팀 프로젝트'],
-    status: 'in-shipped',
+    status: 'shipped',
     year: '26.04 ~ 26.06',
     stars: 0,
     forks: 0,
